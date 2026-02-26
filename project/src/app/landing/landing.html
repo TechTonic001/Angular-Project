@@ -1,0 +1,72 @@
+<div class="landing-page">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a routerLink="/" class="logo">TECH<span>FIT</span></a>
+            <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+            <div class="nav-links" [class.open]="showMenu">
+                <a routerLink="/plan" (click)="showMenu = false">Plans</a>
+                <a routerLink="/login" class="nav-btn-login" (click)="showMenu = false">Log In</a>
+                <a routerLink="/register" class="nav-btn-signup" (click)="showMenu = false">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <span class="badge">Innovation in Sweat</span>
+            <h1>TECH FIT</h1>
+            <p>Data-driven training. Community-driven results.</p>
+            <div class="button-group">
+                <a routerLink="/register" class="btn btn-primary">Start Free Trial</a>
+                <a routerLink="/plan" class="btn btn-outline">Explore Plans</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="benefits-section">
+        <h2>The Tech Fit Edge</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="icon-circle">⚡</div>
+                <h3>High Performance</h3>
+                <p>Advanced tracking algorithms to monitor every rep and calorie burned.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="icon-circle">📊</div>
+                <h3>Smart Analytics</h3>
+                <p>Visualize your progress with integrated data dashboards updated daily.</p>
+            </div>
+            <div class="benefit-item">
+                <div class="icon-circle">🤝</div>
+                <h3>Global Network</h3>
+                <p>Connect with elite athletes and beginners alike in our digital fam.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a class="logo">TECH<span>FIT</span></a>
+                <p>Building the future of fitness, one rep at a time.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <a routerLink="/plan">Pricing</a>
+                <a routerLink="/register">Register</a>
+                <a routerLink="/login">Login</a>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <span>FB</span> <span>IG</span> <span>TW</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tech Fit International. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</div>
