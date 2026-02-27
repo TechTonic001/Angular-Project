@@ -27,7 +27,7 @@ export class LoginComponent {
       if (user) {
         alert(`Welcome back, ${user.username}!`);
         // Redirec
-        this.router.navigate(['/landing']);
+        this.router.navigate(['/plan']);
       } else {
         alert('Invalid email or password. Please try again.');
       }

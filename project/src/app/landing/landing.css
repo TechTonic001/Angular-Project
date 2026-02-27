@@ -19,7 +19,7 @@
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 1px solid #222;
+    border-bottom: 4px solid #222;
 }
 
 .nav-container {
@@ -29,7 +29,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    /* removed horizontal padding so items touch screen edges */
+    padding: 0;
 }
 
 .logo {
@@ -46,8 +47,14 @@
 
 .nav-links {
     display: flex;
-    align-items: center;
-    gap: 25px;
+    /* remove default margin so flex container can align to right */
+    margin: 0;
+    margin-left: auto; /* push links to right side of navbar */
+    gap: 30px; /* space between each link */
+}
+
+.nav-links a {
+    padding: 0 5px; /* small horizontal padding for click area */
 }
 
 .nav-links a {
@@ -69,34 +76,7 @@
     font-weight: bold;
 }
 
-/* mobile hamburger/menu toggle */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    color: #ccc;
-    cursor: pointer;
-}
 
-.menu-toggle:focus {
-    outline: none;
-}
-
-/* dynamic open state for small nav */
-.nav-links.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: rgba(10, 10, 10, 0.95);
-    padding: 20px;
-    border-radius: 8px;
-    gap: 15px;
-}
-
-/* 2. HERO SECTION */
 .hero-section {
     height: 100vh;
     display: flex;
@@ -132,7 +112,7 @@
     margin-bottom: 30px;
 }
 
-/* BUTTONS */
+
 .btn {
     padding: 15px 30px;
     border-radius: 5px;
@@ -159,7 +139,7 @@
     color: #00ff88;
 }
 
-/* 3. BENEFITS SECTION */
+
 .benefits-section {
     padding: 100px 20px;
     text-align: center;
@@ -204,7 +184,7 @@
     line-height: 1.6;
 }
 
-/* 4. FOOTER */
+
 .footer {
     background: #050505;
     padding: 80px 20px 20px;
@@ -262,7 +242,6 @@
     font-size: 0.8rem;
 }
 
-/* ------------------ RESPONSIVE ADJUSTMENTS ------------------ */
 @media (max-width: 1024px) {
     .hero-content h1 {
         font-size: 4rem;
@@ -279,16 +258,8 @@
 }
 
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
     .nav-links {
         display: none;
-    }
-
-    .nav-links.open {
-        display: flex;
     }
 
     .navbar .nav-container {
