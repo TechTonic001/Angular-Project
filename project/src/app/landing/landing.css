@@ -49,12 +49,15 @@
     display: flex;
     /* remove default margin so flex container can align to right */
     margin: 0;
-    margin-left: auto; /* push links to right side of navbar */
-    gap: 30px; /* space between each link */
+    margin-left: auto;
+    /* push links to right side of navbar */
+    gap: 30px;
+    /* space between each link */
 }
 
 .nav-links a {
-    padding: 0 5px; /* small horizontal padding for click area */
+    padding: 0 5px;
+    /* small horizontal padding for click area */
 }
 
 .nav-links a {
